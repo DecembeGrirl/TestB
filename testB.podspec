@@ -21,16 +21,26 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/893833976@qq.com/testB'
+  s.homepage         = 'https://github.com/DecembeGrirl/TestB'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '893833976@qq.com' => 'yangshuyuan@kkworld.com' }
-  s.source           = { :git => 'https://github.com/893833976@qq.com/testB.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/DecembeGrirl/testB.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'testB/Classes/**/*'
+  
+  
+  s.subspec 'source' do |ss|
+    ss.source_files = 'testB/Classes/*.{h,m}'
+  end
+
+   # s.subspec 'framework' do |ss|
+   #   ss.vendored_frameworks = 'testB/*.framework'
+   # end
+
   
   # s.resource_bundles = {
   #   'testB' => ['testB/Assets/*.png']

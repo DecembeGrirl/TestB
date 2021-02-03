@@ -1,7 +1,7 @@
 PODS:
-  - testB (0.1.0):
-    - testB/framework (= 0.1.0)
-  - testB/framework (0.1.0)
+  - testB (0.2.0):
+    - testB/framework (= 0.2.0)
+  - testB/framework (0.2.0)
 
 DEPENDENCIES:
   - testB (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  testB: b5a1008e5215e777f232ab8cce04a1671307736d
+  testB: 72e10724f161ea20cdc7103386fd888d4e9ee2ac
 
 PODFILE CHECKSUM: 231eb9ca96f9030547177c17dc5d65978f465bb2
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'testB'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A short description of testB.'
 
 # This description is used to generate tags and improve search results.
@@ -32,14 +32,20 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'testB/Classes/**/*'
   
+  if ENV['IS_SOURCE'] || ENV[s.name]
+    s.default_subspec = 'source'
+  else
+    s.default_subspec = 'framework'
+  end
+
   
   s.subspec 'source' do |ss|
     ss.source_files = 'testB/Classes/*.{h,m}'
   end
 
-   # s.subspec 'framework' do |ss|
-   #   ss.vendored_frameworks = 'testB/*.framework'
-   # end
+    s.subspec 'framework' do |ss|
+      ss.vendored_frameworks = 'testB/*.framework'
+    end
 
   
   # s.resource_bundles = {

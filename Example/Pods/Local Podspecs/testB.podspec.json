@@ -19,10 +19,15 @@
     "ios": "9.0"
   },
   "source_files": "testB/Classes/**/*",
+  "default_subspecs": "framework",
   "subspecs": [
     {
       "name": "source",
       "source_files": "testB/Classes/*.{h,m}"
+    },
+    {
+      "name": "framework",
+      "vendored_frameworks": "testB/*.framework"
     }
   ]
 }
